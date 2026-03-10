@@ -6,6 +6,11 @@ class Lala < Formula
   license "MIT OR Apache-2.0"
   head "https://github.com/clearclown/lala.git", branch: "main"
 
+  livecheck do
+    url :stable
+    strategy :github_latest
+  end
+
   depends_on "rust" => :build
 
   def install
